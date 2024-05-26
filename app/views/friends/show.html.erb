@@ -1,0 +1,19 @@
+
+<div class="p-3 mb-2 bg-dark-subtle text-light-emphasis text-start">
+  <h1 class="display-4 px-2 py-3">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+  <p class="lead px-3">
+    <%= @friend.email %>  | 
+    <%= @friend.phone %>  |  
+    <%= @friend.twitter %>
+
+  </p>
+  <br/>
+  <div class="d-flex p-2">
+    <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary mx-2 px-4" %>
+    <%= button_to "Delete", @friend, method: :delete, class: "btn btn-danger mx-2 px-3" %>  
+    <%= link_to 'Back', friends_path, class:"btn btn-dark px-4" %>
+  </div>
+</div>
